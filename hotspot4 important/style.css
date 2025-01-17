@@ -160,7 +160,7 @@ textarea,input,select {
   height: 35px;
   cursor: pointer;
 }
-.buttona:hover{
+.buttonb:hover{
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -220,7 +220,7 @@ div.tab button.active {
   border-top: none;
 }
 
-table.tstatus {
+table.status {
   background: #ffffff;
   width: 90%;
   height: 100px;
@@ -228,30 +228,30 @@ table.tstatus {
   border-collapse: collapse;
 }
 
-table.tstatus tr:nth-of-type(odd) {
+table.status tr:nth-of-type(odd) {
   background: #f1f1f1;
 }
-table.tstatus td {
+table.status td {
   padding: 5px;
   border: 1px solid #ccc;
 }
 
-table.tpaketwifi {
+table.tpacketwifi {
   border-collapse: collapse;
   background-color: #ffffff;
 }
 
-table.tpaketwifi td {
+table.tpacketwifi td {
   border: 1px solid #ccc;
   padding: 5px;
 }
 
-table.tpaketwifi tr:first-child{
+table.tpacketwifi tr:first-child{
   background:#008CCA;
   font-weight: bold;
   color: #FFFFFF;
 }
-table.tpaketwifi tr:nth-child(even){
+table.tpacketwifi tr:nth-child(even){
   background-color: #f1f1f1
 }
 
@@ -312,7 +312,7 @@ table.tpaketwifi tr:nth-child(even){
 }
 
 
-/* layar 850px kebawah */
+/* screen 850px below */
 @media screen and (max-width: 850px) {
 	
 .container {
@@ -340,7 +340,7 @@ table.tpaketwifi tr:nth-child(even){
 }
 
 
-/*  layar 600px kebawah */
+/*  screen 600px below */
 @media screen and (max-width: 600px) {
 	
 .container {
