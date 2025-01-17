@@ -16,22 +16,22 @@
 
 <div class="container">
 
-  <div class="notif" id="notifikasi">
+  <div class="notif" id="notification">
 
   </div> <!-- .notif-->
 
 		<div class="left">
-		  <center><img src="img/logo.png" alt="kemangi 41" style="border-radius: 5px; width:200px; height:auto;"/><br></center>
+		  <center><img src="img/logo.png" alt="LaTiw" style="border-radius: 5px; width:200px; height:auto;"/><br></center>
 		  <h3></h3>
 		  <div class="tab">
-		    <button class="tablinks" onclick="openLogin(event, 'KV')" id="kodevoucher">Voucher</button>
+		    <button class="tablinks" onclick="openLogin(event, 'CV')" id="codevoucher">Voucher</button>
 	      <button class="tablinks" onclick="openLogin(event, 'UP')" id="userpass">Member</button>
 	    </div>
 	    
-<!-- Login 1 kolom-->
-      <div id="KV" class="tabcontent">
+<!-- Login 1 column-->
+      <div id="cV" class="tabcontent">
         $(if chap-id)
-        <form name="sendinkv" action="$(link-login-only)" method="post">
+        <form name="sendincv" action="$(link-login-only)" method="post">
           <input type="hidden" name="username" />
           <input type="hidden" name="password" />
           <input type="hidden" name="dst" value="$(link-orig)" />
@@ -50,12 +50,12 @@
         <div>
           <center>
           <div style="padding-top:10px;padding-bottom:10px;">$(if trial == 'yes')<a id="trial1" class="a" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"></a>$(endif)</div>
-          <form autocomplete="off" name="loginkv" action="$(link-login-only)" method="post"
-          $(if chap-id) onSubmit="return doLoginkv()" $(endif)>
+          <form autocomplete="off" name="logincv" action="$(link-login-only)" method="post"
+          $(if chap-id) onSubmit="return doLogincv()" $(endif)>
             <input type="hidden" name="dst" value="$(link-orig)" />
             <input type="hidden" name="popup" value="true" />
-            <input id="user" name="usernamekv" type="text" placeholder="Voucher" onchange="updateInput(this.value)" value="$(username)"/>
-            <input id="pass" name="passwordkv" placeholder="Password" type="hidden"/>
+            <input id="user" name="usernamecv" type="text" placeholder="Voucher" onchange="updateInput(this.value)" value="$(username)"/>
+            <input id="pass" name="passwordcv" placeholder="Password" type="hidden"/>
             <input type="submit" class="buttona" value=" Login " />
             </form>
             </center>
@@ -131,24 +131,24 @@ function openLogin(evt, loginName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("kodevoucher").click();
+document.getElementById("codevoucher").click();
 </script>
 		</div>
 		
 		<div class="middle">
 			<h3 id="title1"></h3>
 		  <center>
-			<table id="paketwifi" align="center" class="tpaketwifi"></table>
+			<table id="wifi package" align="center" class="tpacketwifi"></table>
 			</center>
 			<script type="text/javascript" charset="utf-8">
-            d3.text("paket-wifi.csv", function(data) {
+            d3.text("wifi-package.csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
 
-                var container = d3.select("table.tpaketwifi")
+                var container = d3.select("table.tpacketwifi")
                     .append("div")
 
                     .selectAll("tr")
-                        .data(parsedCSV).enter()
+                        .data(parseCSV).enter()
                         .append("tr")
 
                     .selectAll("td")
