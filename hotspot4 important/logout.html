@@ -26,7 +26,7 @@
 <center>
 <div class="status">
 <br>
-<b>Anda telah logout</b> <br><br>
+<b>You have logged out</b> <br><br>
 
   <table class="tstatus" align="center">
     <tr>
@@ -46,25 +46,25 @@
       <td>$(bytes-in-nice) | $(bytes-out-nice)</td>
     </tr>
     <tr>
-      <td align="right">Aktif</td>
+      <td align="right">Active</td>
       <td>$(uptime)</td>
     </tr>
     $(if remain-bytes-total)
     <tr>
-      <td align="right">Sisa Kuota</td>
+      <td align="right">Remaining Quota</td>
       <td>$(remain-bytes-total-nice)</td>
     </tr>
     $(endif)	  
     $(if session-time-left)	  
     <tr>
-      <td align="right">Sisa Waktu</td>
+      <td align="right">Remaining time</td>
       <td>$(session-time-left)</td>
     </tr>
     $(endif)
   </table>
   <br>
     <form action="$(link-login)" name="login" onSubmit="return openLogin()">
-      <input type="submit" class="buttona" value=" Login kembali ">
+      <input type="submit" class="button" value=" Login kembali ">
     </form>
   <br>
 
